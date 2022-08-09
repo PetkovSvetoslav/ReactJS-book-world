@@ -11,6 +11,7 @@ const BookCard = ({
                 <h6>{book.category}</h6>
                 <h2>{book.title}</h2>
                 <Link to={`/books/${book._id}`} className="details-button">Details</Link>
+                       {/* Осигурява декларативна, достъпна навигация на бутона в приложението. */}
             </div>
         </div>
     );
