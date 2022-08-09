@@ -13,12 +13,14 @@ const LatestBookCard = ({
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
             </div>
             <div className="data-buttons">
+                
                 <Link
                     to={`/books/${book._id}`}
                     className="btn details-btn"
                 >
                     Details
                 </Link>
+                       {/* Осигурява декларативна, достъпна навигация около вашето приложение. */}
             </div>
         </div>
     );
