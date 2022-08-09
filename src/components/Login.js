@@ -4,14 +4,11 @@ const Login = ({
     history
 }) => {
     let historyHook = useHistory();
-
+// useHistory дава достъп до копие на историята, което може да се използва за навигация.
+    
     const onFormSubmit = (e) => {
         e.preventDefault();
-
-        // TODO: Login
-
         history.push('/')
-        // historyHook.push('/games');
     };
     
     return (
