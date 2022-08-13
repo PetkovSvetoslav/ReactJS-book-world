@@ -27,7 +27,7 @@ const Login = ({
                     <input type="password" id="login-password" name="password" placeholder="your password"/>
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>For Registration click <a href="#">here</a></span>
+                        <span>For Registration click <a href="/register">here</a></span>
                     </p>
                 </div>
             </form>
