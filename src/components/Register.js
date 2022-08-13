@@ -18,7 +18,7 @@ const Register = () => {
                     <input className="btn submit" type="submit" value="Register" />
 
                     <p className="field">
-                        <span>For Login click <a href="#">here</a></span>
+                        <span>For Login click <a href="/login">here</a></span>
                     </p>
                 </div>
             </form>
