@@ -3,9 +3,10 @@ import { useHistory } from 'react-router-dom';
 const Login = ({
     history
 }) => {
+    // useHistory дава достъп до копие на историята, което може да се използва за навигация.
     let historyHook = useHistory();
-// useHistory дава достъп до копие на историята, което може да се използва за навигация.
-    
+
+    // при логин ни връща на начална страница
     const onFormSubmit = (e) => {
         e.preventDefault();
         history.push('/')
@@ -13,6 +14,7 @@ const Login = ({
     
     return (
         <section id="login-page" className="auth">
+  {/*    закачаме submit  функцията на формата */}
             <form id="login" onSubmit={onFormSubmit}>
 
                 <div className="container">
