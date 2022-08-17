@@ -1,0 +1,52 @@
+{
+    "books": {
+        "book": {
+            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+            "title": "BookCover",
+            "category": "History",
+            "author": "MG",
+            "imageUrl": "/images/BookCover.png",
+            "summary": "Best history book, easy to read, realistic and fun. Get your best book cover and learn!",
+            "_createdOn": 1617194128618
+        },
+        "book2": {
+            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+            "title": "Design",
+            "category": "DesignCover",
+            "author": "GQ",
+            "imageUrl": "/images/Design.png",
+            "summary": "Set in a world where Design live side by side with us. Get your best Design book and learn!",
+            "_createdOn": 1617194210928
+        },
+        "nonFiction": {
+            "fvjhbdijNOAIDFHBS": {
+                "author": "Jennie Allen",
+                "title": "Get Out of Your Head: Stopping the Spiral of Toxic Thoughts"
+            },
+            "fvjhbdifdasIDFHBS": {
+                "author": "Pete Buttigieg",
+                "title": "Trust: America's Best Chance"
+            },
+            "fvjhbdifdasIDFH472": {
+                "author": "Colleen Hoover",
+                "title": "When Breath Becomes Air"
+            }
+        },
+        "romance": {
+            "dsacadscxIDFHBS": {
+                "author": "Colleen Hoover",
+                "title": "It Ends With Us"
+            },
+            "dsacadsa329cxIDFHBS": {
+                "author": "Jasmine Guillory",
+                "title": "The Proposal"
+            }
+        },
+        "thrillers": {
+            "dsacads32ddbcsjkcHBS": {
+                "author": "Gillian Flynn",
+                "title": "Gone Girl"
+            }
+        }
+    }
+}
