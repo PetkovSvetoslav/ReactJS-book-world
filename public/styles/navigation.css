@@ -1,93 +1,99 @@
-body {
-    background-image: url('../images/book.jpg');
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin: auto;
+nav.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-self: center;  
+  letter-spacing: 0.05rem;
+  background: #733926;;
+  padding: 0.8rem 1rem;
+  color: white;
 }
-
-.auth {
-    width: 100px;
-    margin: 8em auto;
-}
-
-header,
-footer {
-    background-color:#733926;
-    width: 100%;
-    overflow: hidden;
+#site-header > nav > section.navbar-dashboard > a{
+    list-style: none;
+    text-decoration: none;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.5rem;
     color: white;
+    
+}
+#site-header > nav > section.navbar-dashboard > form > input[type="text"],
+#site-header > nav > section.navbar-anonymous > ul > li:nth-child(1) > a,
+#site-header > nav > section.navbar-user > ul > li:nth-child(1),
+#site-header > nav > section.navbar-dashboard > ul > li:nth-child(1) > a{
+    margin-right: 0.5rem;
+
 }
 
-.home {
-   
-    font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   
+
+nav.navbar ul {
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0;
+}
+nav.navbar ul li {
+  display: block;
+  list-style: none outside;
+  position: relative;
+}
+nav.navbar ul li a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-weight: bold;
+  background: cadetblue;
+  color: rgb(255, 255, 255);
+}
+.button:hover,
+nav.navbar ul li a:hover,
+nav.navbar ul li:hover > a {
+  background: rgb(248, 215, 107);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
-header {
-    width: 100%;
-    position: relative;
-    padding: 10px;
-}
 
-.home header h1 {
-    margin: auto;
-    text-align: center;
-    display: inline-block;
-    background-color: #733926;
+
+.dashboard nav{
+    background: transparent;
+}
+.navbar-dashboard{
+    display: flex;
+    justify-content: space-between;    
+    width: 100vw;
+}
+.navbar .first-bar{
+    display: flex;
+    align-items: center;
+}
+.navbar .first-bar a{
     color: white;
-    margin-bottom: auto;
+    margin-right: 0.5rem;
 }
-
-header nav {
-    font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    position: absolute;
-    right: 0;
-    bottom: 25px;
-    margin-right: 20px;
+.navbar .first-bar input{  
+    margin-right: 0.5rem;
 }
-
-header nav>* {
-    float: left;
+#site-header > nav > section > div.first-bar > a:nth-child(1){
+    font-weight: bold;
+    font-size: 1.5rem;
 }
-
-footer {
-    padding: 0.5em;
-    width: 100%;
-    position: relative;
-    left: 0;
-    bottom: 0;
+.navbar .first-bar form{
+    display: flex;
+    align-items: center;
 }
-.footer p{
-    margin: auto;
-    text-align: center;
-
-  
+.navbar .second-bar ul{
+    display: flex;
+    align-items: center;
 }
-
-nav a {
-   
-    margin: 0 0.5em;
+.navbar .second-bar ul li{
+    margin-right: 0.5rem;
 }
-
-nav a:hover {
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-weight: bolder;
+.navbar-anonymous ul{
+    display: flex;
 }
-
-.home:hover {
-
-    color: rgb(0, 0, 0);
-}
-
-#user,
-#guest {
-    margin: 0;
-    padding: 0;
+.button {
+    margin-right: 10px;
+    margin-left: 10px;
 }
