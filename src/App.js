@@ -1,40 +1,63 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './components/Home';
-import BookCatalog from './components/BookCatalog/BookCatalog';
-import CreateBook from './components/CreateBook';
-import Login from './components/Login';
-import Register from './components/Register';
-import ErrorPage from './components/ErrorPage';
-import BookDetails from './components/BookDetails.js';
-import {Footer} from './components/Footer.js';
+import './App.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+import useLocalStorage from './hooks/useLocalStorage';
+import { AuthContext } from './contexts/AuthContext';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Dashboard from './components/Dashboard/Dashboard';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import Details from './components/Details/Details';
+import Edit from './components/Edit/Edit';
+import Create from './components/Create/Create';
+// import MyBooks from './components/MyBooks/MyBooks';
+import Logout from './components/Logout/Logout';
 
 function App() {
+    const [user, setUser] = useLocalStorage('user',{
+        email: '',
+        _id: '',
+        accessToken: ''
+    });
+
+    const login = (authData) => {
+        setUser(authData);
+    };
+
+    const onLogout = () => {
+        setUser({
+            email: '',
+            _id: '',
+            accessToken: ''
+        })
+    };
+
     return (
-        <div id="box">
-            <Header />
-
-            <main id="main-content">
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/books" exact component={BookCatalog} />
-                    <Route path="/create-book" component={CreateBook} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/register" component={Register} />
-                    <Route path="/books/:bookId" component={BookDetails} />
-                    <Route path="/custom">
-                        <h2>Custom Page</h2>
-                        <p>dasklfjasldf </p>
-                    </Route>
-                    <Route path="/logout" render={(props) => {
-                        console.log('Logged Out!!!');
-
-                        return <Redirect to="/" />
-                    }} />
-                </Switch>
-            </main>
-             <Footer />
-        </div>
+        <AuthContext.Provider value={{user, login}}>
+            <div id="container">
+                <Header email={user.email}/>
+                <main id="site-content">
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route
+                            path="/login"
+                            element={<Login />}
+                        />
+                        <Route path="/details/:id" element={<Details />} />
+                        <Route path="/edit/:id" element={<Edit />} />
+                        <Route path="/add-pet" element={<Create />} />
+                        <Route
+                            path="/logout"
+                            element={<Logout onLogout={onLogout} />}
+                        />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </AuthContext.Provider>
     );
 }
 
